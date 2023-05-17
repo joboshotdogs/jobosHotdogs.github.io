@@ -2,52 +2,304 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>JoBo's Hotdogs</title>
 
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">JoBo's Hotdogs</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <!--
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                           
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        -->
-                        </li>
-                    </ul>
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Jobo's Hotdogs</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" onclick="scrollToMenu()" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Menu</a>
+                    </li>
+                    <li class="nav-item" >
+                      <a class="nav-link" onclick="scrollToToppings()" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Condiments</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" onclick="scrollToContact()" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact Us</a>
+                    </li>
+                  </ul>
                 </div>
-            </div>
-        </nav>
+              </div>
+            </nav>
+          </header>
         <!-- Page content-->
-        <div class="container">
-            <div class="text-center mt-5">
-                <div class="d-flex justify-content-center">
-                    <img src="/img/logo.JPG" alt="" class="img-fluid m">
-                </div>
-                <h1 >Coming Soon</h1>
+        <div class="page-container">
+
+            <div id="welcome" class="container">
+                <div class="container col-xxl-10 px-4 pt-5">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                      <div class="col-10 col-sm-8 col-lg-6 d-none d-sm-block">
+                        <img src="/img/logo.JPG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="500" loading="lazy">
+                      </div>
+                      <div class="col-lg-6">
+                        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 text-center">All American Hotdogs served in Greenville, NC</h1>
+                        <p class="lead">Jobo's Hotdogs is your go-to spot for delicious and fresh hot dogs that are sure to satisfy your craving. Search no further for the perfect snack or meal – we have got you covered!</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Locate Us</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
+
+            <!-- <div id="location" class="container">
+                <div class="container px-4 py-5" id="hanging-icons">
+                    <h2 class="pb-2 border-bottom">Find Us – Current Location</h2>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2">Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                            Primary button
+                            </a>
+                        </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2">Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                            Primary button
+                            </a>
+                        </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="fs-2">Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                            Primary button
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+            <div id="menu" class="container">
+                <div class="container px-4 pt-4" id="hanging-icons">
+                    <h2 class="pb-2 pt-5 border-bottom">Menu</h2>
+                    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                              <h3 class="fs-2">JoBo Combo</h3>
+                              <h3>$8.00</h3>
+                            </div> 
+                            <p>2 Dogs, chips, and drink.  Mix and match between beef, red, and our famous Pickle Dog</p>
+                        </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                              <h3 class="fs-2">100% Beef Dog</h3>
+                              <h3>$3.00</h3>
+                            </div>
+                            <p>Savor the classic flavor of our mouthwatering, 100% beef hotdogs crafted by Nathans—a perfect blend of quality ingredients and irresistible taste that will make your taste buds dance with joy!</p>
+                        </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+                        </div>
+                        <div>
+                           <div class="d-flex justify-content-between">
+                              <h3 class="fs-2">Red Dog</h3>
+                              <h3>$3.00</h3>
+                            </div>
+                            <p>Indulge in a true taste of the South with our signature 'Red' Dog—a deliciously bold and tangy twist on the classic hotdog, featuring a zesty combination of secret spices that will transport your palate straight to Southern bliss.</p>
+                        </div>
+                        </div>
+                        <div class="col d-flex align-items-start">
+                        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between">
+                              <h3 class="fs-2">Pickle Dog</h3>
+                              <h3>$3.00</h3>
+                            </div>
+                            <p>Attention pickle lovers! Experience pickle paradise with our Pickle Dog—a tantalizing fusion of a dill pickle and a bun, delivering a flavor explosion that will leave you wanting more. A must-try for pickle aficionados!</p>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <div id="toppings" class="container">
+              <div class="container px-4 pt-5" id="icon-grid">
+                <h2 class="pb-2 pt-4 border-bottom">Condiments Included</h2>
+            
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-1-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Ketchup</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-2-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Mayo</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-3-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Mustard</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-4-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Chilli</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-5-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Slaw</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-6-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Onions</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-7-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Hot Sauce</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-8-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Relish</h3>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
+                    <div class="d-flex">
+                      <i class="bi bi-9-circle-fill pe-3"></i>
+                      <h3 class="fw-bold mb-0 fs-4">Brown Mustard</h3>
+                    </div>
+                  </div>
+                  <h2 class="pb-2 border-bottom">Condiments Extra Charge</h2>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
+                    <div class="d-flex w-100">
+                      <i class="bi bi-1-circle-fill pe-3"></i>
+                      <div class="d-flex w-100 justify-content-between">
+                        <h3 class="fw-bold mb-0 fs-4">Cheese</h3>
+                        <h3 class="">+$1.00</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="contactus" class="container">
+                <div class="container my-5">
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Contact Us</h1>
+                        <p class="lead">We're here to serve you! Reach out to us with any questions, feedback, or special requests through our Contact Us section, and our friendly team will be delighted to assist you and ensure your hot dog experience exceeds expectations.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                          <div class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">joboshotdogs@gmail.com</div>
+                          <div class="btn btn-primary btn-lg px-4 fw-bold" onclick="window.open('tel:3364554993');">(336)-455-4993</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                        <img src="/img/logo.JPG" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="900" height="500" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div clas></div>
         </div>
+
+
+        <footer class="footer mt-auto py-3 bg-body-tertiary">
+            <div class="container d-flex justify-content-between">
+              <span class="text-body-secondary"> JOBO'S HOTDOGS, LLC</span>
+              <span class="text-body-secondary"> (336)-455-4993</span>
+            </div>
+          </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <script>
+          function scrollToMenu() {
+            document.querySelector('#menu').scrollIntoView({ 
+              top:100,
+              behavior: 'smooth' 
+            });
+          }
+
+          function scrollToToppings() {
+            document.querySelector('#toppings').scrollIntoView({ 
+              behavior: 'smooth' 
+            });
+          }
+
+          function scrollToContact() {
+            document.querySelector('#contactus').scrollIntoView({ 
+              top:100,
+              behavior: 'smooth' 
+            });
+          }
+          
+        </script>
     </body>
 </html>
